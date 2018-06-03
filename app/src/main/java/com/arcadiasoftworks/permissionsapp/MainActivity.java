@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
                     if(checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
-                        
+
+                    } else {
+                        makeCall();
                     }
                 } else {
                     makeCall();
