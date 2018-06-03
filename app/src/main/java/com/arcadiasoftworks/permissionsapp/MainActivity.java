@@ -1,5 +1,7 @@
 package com.arcadiasoftworks.permissionsapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,5 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+    private void makeCall() {
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:" + "12345678"));
+        startActivity(intent);
     }
 }
